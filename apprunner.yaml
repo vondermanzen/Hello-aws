@@ -1,0 +1,9 @@
+version: 1.0
+runtime: python3
+build:
+  commands:
+    - pip3 install flask gunicorn
+run:
+  command: python3 -m gunicorn app:app --bind 0.0.0.0:8080
+  network:
+    port: 8080
