@@ -1,6 +1,8 @@
 © The Chancellor, Masters and Scholars of The University of Oxford. All rights reserved.
 
-The workshop version of the AWS course is [available here](https://selectyourcloudinstance.com/workshop/). 
+A modified version of this workshop was offered in-person to a cohort of researchers by the Competency Centre in 2025. 
+
+Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
 
 # Explore different providers
 
@@ -8,47 +10,47 @@ This course is available for multiple cloud providers. Choose your preferred pla
 
 - [Hello Google Cloud](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-gcloud)
 - [Hello Microsoft Azure](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-mazure)
-- [Hello Amazon Web Services](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-aws) (⭐ Most popular)
+- [Hello Amazon Web Services](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-aws) (You are here) (⭐ Most popular)
 
 # Instructions
 
 <details>
-<summary>Step 1. Fork (or make a copy of) this repository</summary>
+<summary>Copy this repository (Optional: fork it)</summary>
 
 ![Step 2](README_images/download.png)
 
 ***
 </details>
 <details>
-<summary>Step 2. Go to the AWS Console and type "app runner" in the search bar</summary>
+<summary>Go to the AWS Console and type "app runner" in the search bar</summary>
 
 ![Step 2](README_images/img1.png)
 
 ***
 </details>
 <details>
-<summary>Step 3. Create a new service</summary>
+<summary>Create a new service</summary>
 
 ![Step 3](README_images/img2.png)
 
 ***
 </details>
 <details>
-<summary>Step 4. Select source code repository and link your repository</summary>
+<summary>Select source code repository and link your repository</summary>
 
 ![Step 4](README_images/img3.png)
 
 ***
 </details>
 <details>
-<summary>Step 5. Set deployment to automatic</summary>
+<summary>Set deployment to automatic</summary>
 
 ![Step 5](README_images/img4.png)
 
 ***
 </details>
 <details>
-<summary>Step 6. Select "Use a configuration file" (apprunner.yaml is already in the repository)</summary>
+<summary>Select "Use a configuration file" (apprunner.yaml is already in the repository)</summary>
 
 ![Step 6](README_images/img5.png)
 
@@ -56,7 +58,7 @@ This course is available for multiple cloud providers. Choose your preferred pla
 </details>
 
 <details>
-<summary>Step 7. Choose a name for your service and deploy it. Default settings like 1 CPU and 2 GB RAM are enough.</summary>
+<summary>Choose a name for your service and deploy it. Default settings like 1 CPU and 2 GB RAM are enough.</summary>
 
 ![Step 7](README_images/img6.png)
 
@@ -236,21 +238,12 @@ To this role, attach the S3 full access policy.
 </details>
 
 <details>
-<summary><h2>Testing on your local machine</h2></summary>
+<summary><h2>Local testing</h2></summary>
 
-After a while, it's not fun anymore to wait for deployment. You want to test your changes before. 
+You need to test your changes before publishing them. 
 
 <details>
-<summary>Step 1. Install git and clone the repository on your local machine</summary>
-
-```	
-	git clone {repository_link}
-```
-
-***
-</details>
-<details>
-<summary>Step 2. Install Python</summary>
+<summary>Install Python</summary>
 
 ```	
 https://www.python.org/downloads/
@@ -258,167 +251,29 @@ https://www.python.org/downloads/
 
 ***
 </details>
-<details>
-<summary>Step 3. Install dependencies</summary>
-
-```	
-	 python -m pip install -r requirements.txt
-```
-
-***
-</details>
-<details>
-<summary>Step 4. Run flask</summary>
-
-```	
-	 python -m flask run --port=80
-```
-
-Open localhost in your browser.  
-
-***
-</details>
-
-![Local testing](README_images/local_testing.png)
-
-</details>
-
-<details>
-<summary><h2>Running a job on a separate machine</h2></summary>
-
-This web server is not powerful enough to handle sophisticated tasks. What if GPUs are needed for a heavy workflow? Then you need the ability to create machines dynamically and control them remotely (Infrastructure as Code). 
-
 <details>
 <summary>Install dependencies</summary>
-Missing content
-</details>
 
-</details>
-
-# Working through CLI on your local machine
-
-<details>
-<summary><h2>Setup the AWS CLI</h2></summary>
-
-<details>
-<summary>Step 1. Install the AWS CLI on your local machine</summary>
-
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-
-***
-</details>
-
-<details>
-<summary>Step 2. In the AWS Console, go to security credentials </summary>
-
-![Security credentials](README_images/security_credentials.png)
-
-***
-</details>
-
-<details>
-<summary>Step 3. Create an access key </summary>
-
-![Access key](README_images/create_access_key.png)
-
-![Access key](README_images/access_key.png)
-
-***
-</details>
-
-<details>
-<summary>Step 4. Configure AWS on your local machine</summary>
-
-Command: aws configure
-
-![Access key](README_images/aws_configure.png)
-
-***
-</details>
-</details>
-
-
-<details>
-<summary><h2>Upload the app to Elastic Container Registry</h2></summary>
-
-<details>
-<summary>Step 1. Install Python on your local machine </summary>
-
-https://www.python.org/downloads/
-
-***
-</details>
-
-<details>
-<summary>Step 2. Install Docker on your local machine </summary>
-
-https://www.docker.com/get-started/
-
-***
-</details>
-
-<details>
-<summary>Step 3. Run script upload_ecr_image.py </summary>
-
-![Access key](README_images/upload_ecr_image.png)
-
-***
-</details>
-
-<details>
-<summary>Step 4. In the AWS Console search bar, type "ecr" </summary>
-
-![Access key](README_images/search_ecr.png)
-
-***
-</details>
-
-<details>
-<summary>Step 5. Check that the repository appears </summary>
-
-![Ac](README_images/ecr_repositories.png)
-
-***
-</details>
-
-<details>
-<summary>Step 6. Now you can go back to creating an App Runner service using the ECR. You have the choice to do that through the AWS Console again, or programmatically with a script in the next section.</summary>
-
-![Access key](README_images/deploy_with_ecr.png)
-
-***
-</details>
-
-</details>
-
-
-<details>
-<summary><h2>Create the service using the ECR image</h2></summary>
-
-<details>
-<summary>Step 1. Run script create_service.py </summary>
-
-![Create service](README_images/create_service.png)
+```	
+python -m pip install --break-system-packages -r requirements.txt
+```
 
 ***
 </details>
 <details>
-<summary>Step 2. Go to the AWS Console and type "app runner" in the search bar</summary>
+<summary>Run flask</summary>
 
-![Search app runner](README_images/img1.png)
+```	
+python -m flask run --port=80
+```
 
-***
-</details>
-<details>
-<summary>Step 3. Check the service is up and running</summary>
-
-![Services](README_images/services.png)
+Open localhost in your browser.   
 
 ***
 </details>
 
+<img width="280" height="126" alt="image" src="https://github.com/user-attachments/assets/60bc8002-f853-4879-b6d4-b95a35e709d9" />
+
 </details>
-
-
 
 
