@@ -1,6 +1,6 @@
 © The Chancellor, Masters and Scholars of The University of Oxford. All rights reserved.
 
-A modified version of this course was offered as in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
+A modified version of this course was offered as an in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
 
 Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
 
@@ -97,7 +97,7 @@ If you want to use a custom domain, just click "Link domain" in App Runner and f
 <details>
 <summary><h2>Cleaning up</h2></summary>
 
-Don't forget to delete your service when you are no longer using it. You can always redeploy later.
+Don't forget to delete your service when you are no longer using it. It should be quite easy to redeploy it later with same URL.
 
 <img width="361" height="192" alt="delete" src="https://github.com/user-attachments/assets/6f3d35bf-6616-45a5-a950-9d20dbf0837a" />
 
