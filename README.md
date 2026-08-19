@@ -1,6 +1,6 @@
 © The Chancellor, Masters and Scholars of The University of Oxford. All rights reserved.
 
-A modified version of this workshop was offered in-person to a cohort of researchers by the Competency Centre in 2025. 
+A modified version of this course was offered as in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
 
 Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
 
@@ -17,42 +17,42 @@ This course is available for multiple cloud providers. Choose your preferred pla
 <details>
 <summary>Copy this repository (Optional: fork it)</summary>
 
-![Image](README_images/download.png)
+<img width="447" height="368" alt="image" src="https://github.com/user-attachments/assets/01310092-b483-4b5a-adff-3b2640fc2917" />
 
 ***
 </details>
 <details>
 <summary>Go to the AWS Console and type "app runner" in the search bar</summary>
 
-![Image](README_images/img1.png)
+<img width="1129" height="219" alt="img1" src="https://github.com/user-attachments/assets/250e6f9f-57a3-4f5b-bb63-86cb9a3ec17c" />
 
 ***
 </details>
 <details>
 <summary>Create a new service</summary>
 
-![Image](README_images/img2.png)
+<img width="493" height="203" alt="img2" src="https://github.com/user-attachments/assets/65130195-f121-4c29-846e-92bc30e09574" />
 
 ***
 </details>
 <details>
 <summary>Select source code repository and link your repository</summary>
 
-![Image](README_images/img3.png)
+<img width="1516" height="762" alt="img3" src="https://github.com/user-attachments/assets/7a62e400-1bdc-4e0c-8a8b-f8b5737df7ea" />
 
 ***
 </details>
 <details>
 <summary>Set deployment to automatic</summary>
 
-![Step 5](README_images/img4.png)
+<img width="1507" height="242" alt="img4" src="https://github.com/user-attachments/assets/fd589f22-fffc-45c0-8391-c4849f73cd33" />
 
 ***
 </details>
 <details>
 <summary>Select "Use a configuration file" (apprunner.yaml is already in the repository)</summary>
 
-![Image](README_images/img5.png)
+<img width="1525" height="273" alt="img5" src="https://github.com/user-attachments/assets/a561dd54-cc4f-4ff0-8fee-ed1bc1762731" />
 
 ***
 </details>
@@ -60,14 +60,14 @@ This course is available for multiple cloud providers. Choose your preferred pla
 <details>
 <summary>Choose a name for your service and deploy it. Default settings like 1 CPU and 2 GB RAM are enough.</summary>
 
-![Image](README_images/img6.png)
+<img width="1525" height="284" alt="img6" src="https://github.com/user-attachments/assets/f75d5fb5-bb59-437b-bb8a-eb732502bd25" />
 
 ***
 </details>
 
 The app should now be publicly accessible.
 
-![Image](README_images/img7.png)
+<img width="551" height="103" alt="img7" src="https://github.com/user-attachments/assets/08fbbdc2-2707-4491-b4c2-ebe7d7f1ff4b" />
 
 ***
 
@@ -78,7 +78,7 @@ The app should now be publicly accessible.
 
 You can commit some changes to your repository and watch how the service is updated automatically.
 
-![Image](README_images/update.png)
+<img width="674" height="326" alt="update" src="https://github.com/user-attachments/assets/c2c425e1-0579-4cec-8a61-d68d1ed58687" />
 
 </details>
 
@@ -87,9 +87,10 @@ You can commit some changes to your repository and watch how the service is upda
 
 If you want to use a custom domain, just click "Link domain" in App Runner and follow the instructions. If you are not using Route 53, you will be asked to create the DNS records in your external account (CloudFlare, Azure DNS, etc.)
 
-![Image](README_images/link_domain.png)
+<img width="1891" height="568" alt="link_domain" src="https://github.com/user-attachments/assets/1d152ae9-706c-4825-be6a-0a5fbcffb38f" />
 
-![Image](README_images/domain.png)
+<img width="496" height="100" alt="domain" src="https://github.com/user-attachments/assets/d4164e21-cbc3-4de8-a181-592e7b4ee1e8" />
+
 
 </details>
 
@@ -98,7 +99,7 @@ If you want to use a custom domain, just click "Link domain" in App Runner and f
 
 Don't forget to delete your service when you are no longer using it. You can always redeploy later.
 
-![Image](README_images/delete.png)
+<img width="361" height="192" alt="delete" src="https://github.com/user-attachments/assets/6f3d35bf-6616-45a5-a950-9d20dbf0837a" />
 
 </details>
 
@@ -121,7 +122,7 @@ def hello_api():
 
 Then test your endpoint
 
-![API endpoint](README_images/hello_api.png)
+<img width="491" height="200" alt="hello_api" src="https://github.com/user-attachments/assets/2731d1be-2222-4199-af89-af6a8f8866aa" />
 
 </details>
 
@@ -136,6 +137,9 @@ You need to test your changes before publishing them.
 ```bash
 git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-aws.git
 ```
+
+<img width="447" height="368" alt="image" src="https://github.com/user-attachments/assets/2bd75475-4696-42a6-892e-659a7a026c64" />
+
 ***
 </details>
 
@@ -166,10 +170,14 @@ python -m flask run --port=80
 
 Open localhost in your browser.
 
+<img width="290" height="110" alt="image" src="https://github.com/user-attachments/assets/371d43c0-8c12-4faa-9f6b-6a8295a7e8d4" />
+
 ***
 </details>
 
 </details>
+
+***
 
 # Exercise: Ducks and AWS CLI
 
@@ -179,6 +187,9 @@ Open localhost in your browser.
 ```bash
 git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-aws.git
 ```
+
+<img width="447" height="368" alt="image" src="https://github.com/user-attachments/assets/b4669cc5-7e00-4602-be4d-53c1204178f9" />
+
 ***
 </details>
 
@@ -354,7 +365,7 @@ Replace index.html with this code to render duck.glb
 
 </details>
 
-![Image](README_images/duck.png)
+<img width="1852" height="1005" alt="image" src="https://github.com/user-attachments/assets/153165d1-cbd6-41be-a8e1-6d2790d525b8" />
 
 ***
 </details>
@@ -380,7 +391,7 @@ aws s3api create-bucket --bucket hello-bucket --create-bucket-configuration Loca
 <details>
 <summary>Check the S3 bucket has been properly created</summary>
 
-![Created S3 bucket](README_images/created_s3_bucket.png)
+<img width="1044" height="500" alt="created_s3_bucket" src="https://github.com/user-attachments/assets/df310f98-eb83-4a02-8b64-c0631eafb40b" />
 
 ***
 </details>
@@ -398,7 +409,7 @@ aws s3 cp duck.glb s3://hello-bucket/duck.glb --content-type "model/gltf-binary"
 <details>
 <summary>Check the duck is in the S3 bucket</summary>
 
-![Uploaded S3 bucket](README_images/uploaded_s3_bucket.png)
+<img width="869" height="421" alt="uploaded_s3_bucket" src="https://github.com/user-attachments/assets/eb352d29-6943-4942-b6d2-6653506fb7c2" />
 
 ***
 </details>
@@ -429,7 +440,7 @@ aws s3api delete-bucket --bucket hello-bucket
 <details>
 <summary>Check that the S3 bucket is deleted</summary>
 
-![Cleaned S3 bucket](README_images/cleaned_s3_bucket.png)
+<img width="910" height="247" alt="cleaned_s3_bucket" src="https://github.com/user-attachments/assets/8008a4cc-19a4-459b-800f-d2af1dca5063" />
 
 ***
 </details>
@@ -439,15 +450,15 @@ aws s3api delete-bucket --bucket hello-bucket
 
 Your web app in AWS App Runner can perform the same action, but it needs to be authorized to use S3. 
 
-![Security error](README_images/security_error.png)
+<img width="420" height="249" alt="security_error" src="https://github.com/user-attachments/assets/2c384b3f-eda3-4f3f-9d22-2b4522b98819" />
 
 In App Runner, go to Configuration, then Security, and associate the instance to a role. 
 
-![Security configuration](README_images/configuration_security.png)
+<img width="920" height="570" alt="configuration_security" src="https://github.com/user-attachments/assets/c66ed83a-0e07-4d95-bb13-bc59f82909d6" />
 
 To this role, attach the S3 full access policy. 
 
-![Attach policy](README_images/attach_policy.png)
+<img width="681" height="447" alt="attach_policy" src="https://github.com/user-attachments/assets/0cd842d1-da45-4f37-9138-a4110f79a0bd" />
 
 Once this is done, it can use AWS CLI or, since this a Python app, the Boto 3 library in app.py. 
 
