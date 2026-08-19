@@ -1,9 +1,5 @@
 © The Chancellor, Masters and Scholars of The University of Oxford. All rights reserved.
 
-A modified version of this course was offered as an in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
-
-Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
-
 # Explore different providers
 
 This course is available for multiple cloud providers. Choose your preferred platform:
@@ -11,6 +7,16 @@ This course is available for multiple cloud providers. Choose your preferred pla
 - [Hello Google Cloud](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-gcloud)
 - [Hello Microsoft Azure](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-azure)
 - [Hello Amazon Web Services](https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-aws) (You are here) (⭐ Most popular)
+
+# University workshop
+
+A modified version of this course was offered as an in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
+
+Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
+
+# Disclaimer
+
+App Runner [no longers exists](https://docs.aws.amazon.com/apprunner/latest/dg/apprunner-availability-change.html). This course must be rewritten for ECS Express. 
 
 # Instructions
 
