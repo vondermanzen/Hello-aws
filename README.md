@@ -65,6 +65,8 @@ Everyone has moved on to other projects within the university and new courses an
 
 The app should now be publicly accessible.
 
+<img width="579" height="149" alt="image" src="https://github.com/user-attachments/assets/553e3736-6cbd-4f74-8282-2cff94420fef" />
+
 ***
 
 # Going further
@@ -101,6 +103,8 @@ def hello_api():
 ```
 
 Then test your endpoint
+
+(Image missing here)
 
 </details>
 
