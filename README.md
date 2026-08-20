@@ -19,37 +19,51 @@ Everyone has moved on to other projects within the university and new courses an
 <details>
 <summary>Go to Amazon ECR / Private registry / Repositories and create a new repository called hello-aws</summary>
 
+<img width="646" height="275" alt="image" src="https://github.com/user-attachments/assets/9cf071ab-8ca3-4dd4-b215-dccb0c9d7c41" />
+
 ***
 </details>
 <details>
 <summary>Go to Code Build / Build Project and create a new build project called hello-aws</summary>
 
+<img width="940" height="247" alt="image" src="https://github.com/user-attachments/assets/68927bff-0a11-43d6-a6a7-57d05ab30f4a" />
+
 ***
 </details>
 <details>
-<summary>Select GitHub/Public repository as the source, name the service role hello-aws-codebuild-role and tick "Use a buildspec file"</summary>
+<summary>Select GitHub/Public repository as the source, name the service role for example hello-aws-codebuild-role and tick "Use a buildspec file"</summary>
+
+<img width="922" height="400" alt="image" src="https://github.com/user-attachments/assets/72bbf2f3-eb0c-4ef8-bdae-fc71fb12e607" />
+
+<img width="670" height="188" alt="image" src="https://github.com/user-attachments/assets/90929c30-683a-4bc8-a5b0-843a67808e18" />
+
+<img width="1368" height="252" alt="image" src="https://github.com/user-attachments/assets/1442968e-6e29-4db3-954c-4a2d4f75e461" />
 
 ***
 </details>
 <details>
 <summary>Click on the build project's service role / Add permissions / Attach policies and attach AmazonEC2ContainerRegistryPowerUser</summary>
+	
+<img width="1464" height="258" alt="image" src="https://github.com/user-attachments/assets/d295d6f6-2213-454d-b032-f575fe8e4e19" />
 
 ***
 </details>
 <details>
 <summary>Press Start build</summary>
 
+<img width="1119" height="217" alt="image" src="https://github.com/user-attachments/assets/be66b6e8-0409-43c0-a8f1-2ed5c45c4105" />
+
 ***
 </details>
 <details>
 <summary>Go to Amazon Elastic Container Service / Express Mode. Select the built image and set image selection to tag "latest"</summary>
 
+<img width="832" height="578" alt="image" src="https://github.com/user-attachments/assets/b807fbbc-4486-454c-ad2f-1e9e6ea42158" />
+
 ***
 </details>
 
 The app should now be publicly accessible.
-
-<img width="551" height="103" alt="img7" src="https://github.com/user-attachments/assets/08fbbdc2-2707-4491-b4c2-ebe7d7f1ff4b" />
 
 ***
 
@@ -58,7 +72,7 @@ The app should now be publicly accessible.
 <details>
 <summary><h2>Modifying the code</h2></summary>
 
-If you select your private repository in Codebuild, then every commit will create a new image automatically. After that, you need to press "Update service" in ECS. 
+If you select your private repository as the source of the build project, then every commit will create a new image automatically. After that, you need to press "Update service" in ECS. 
 
 </details>
 
