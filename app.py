@@ -32,6 +32,8 @@ def home():
 def serve_file(filename):
     return send_from_directory(os.path.dirname(os.path.abspath(__file__)), filename)
 
+application = app
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 80))
     app.run(host="0.0.0.0", port=port)
