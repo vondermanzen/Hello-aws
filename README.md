@@ -14,59 +14,35 @@ A modified version of this course was offered as an in-person workshop to a coho
 
 Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
 
-# Disclaimer
-
-App Runner [no longers exists](https://docs.aws.amazon.com/apprunner/latest/dg/apprunner-availability-change.html). This course must be rewritten for ECS Express. 
-
 # Instructions
 
 <details>
-<summary>Copy this repository (Optional: fork it)</summary>
-
-<img width="447" height="368" alt="image" src="https://github.com/user-attachments/assets/01310092-b483-4b5a-adff-3b2640fc2917" />
+<summary>Go to Amazon ECR / Private registry / Repositories and create a new repository called hello-aws</summary>
 
 ***
 </details>
 <details>
-<summary>Go to the AWS Console and type "app runner" in the search bar</summary>
-
-<img width="1129" height="219" alt="img1" src="https://github.com/user-attachments/assets/250e6f9f-57a3-4f5b-bb63-86cb9a3ec17c" />
+<summary>Go to Code Build / Build Project and create a new build project called hello-aws</summary>
 
 ***
 </details>
 <details>
-<summary>Create a new service</summary>
-
-<img width="493" height="203" alt="img2" src="https://github.com/user-attachments/assets/65130195-f121-4c29-846e-92bc30e09574" />
+<summary>Select GitHub/Public repository as the source, name the service role hello-aws-codebuild-role and tick "Use a buildspec file"</summary>
 
 ***
 </details>
 <details>
-<summary>Select source code repository and link your repository</summary>
-
-<img width="1516" height="762" alt="img3" src="https://github.com/user-attachments/assets/7a62e400-1bdc-4e0c-8a8b-f8b5737df7ea" />
+<summary>Click on the build project's service role / Add permissions / Attach policies and attach AmazonEC2ContainerRegistryPowerUser</summary>
 
 ***
 </details>
 <details>
-<summary>Set deployment to automatic</summary>
-
-<img width="1507" height="242" alt="img4" src="https://github.com/user-attachments/assets/fd589f22-fffc-45c0-8391-c4849f73cd33" />
+<summary>Press Start build</summary>
 
 ***
 </details>
 <details>
-<summary>Select "Use a configuration file" (apprunner.yaml is already in the repository)</summary>
-
-<img width="1525" height="273" alt="img5" src="https://github.com/user-attachments/assets/a561dd54-cc4f-4ff0-8fee-ed1bc1762731" />
-
-***
-</details>
-
-<details>
-<summary>Choose a name for your service and deploy it. Default settings like 1 CPU and 2 GB RAM are enough.</summary>
-
-<img width="1525" height="284" alt="img6" src="https://github.com/user-attachments/assets/f75d5fb5-bb59-437b-bb8a-eb732502bd25" />
+<summary>Go to Amazon Elastic Container Service / Express Mode. Select the built image and set image selection to tag "latest"</summary>
 
 ***
 </details>
@@ -82,30 +58,14 @@ The app should now be publicly accessible.
 <details>
 <summary><h2>Modifying the code</h2></summary>
 
-You can commit some changes to your repository and watch how the service is updated automatically.
-
-<img width="674" height="326" alt="update" src="https://github.com/user-attachments/assets/c2c425e1-0579-4cec-8a61-d68d1ed58687" />
-
-</details>
-
-<details>
-<summary><h2>Using a custom domain</h2></summary>
-
-If you want to use a custom domain, just click "Link domain" in App Runner and follow the instructions. If you are not using Route 53, you will be asked to create the DNS records in your external account (CloudFlare, Azure DNS, etc.)
-
-<img width="1891" height="568" alt="link_domain" src="https://github.com/user-attachments/assets/1d152ae9-706c-4825-be6a-0a5fbcffb38f" />
-
-<img width="496" height="100" alt="domain" src="https://github.com/user-attachments/assets/d4164e21-cbc3-4de8-a181-592e7b4ee1e8" />
-
+If you select your private repository in Codebuild, then every commit will create a new image automatically. After that, you need to press "Update service" in ECS. 
 
 </details>
 
 <details>
 <summary><h2>Cleaning up</h2></summary>
 
-Don't forget to delete your service when you are no longer using it. It should be quite easy to redeploy it later with same URL.
-
-<img width="361" height="192" alt="delete" src="https://github.com/user-attachments/assets/6f3d35bf-6616-45a5-a950-9d20dbf0837a" />
+To clean up fully, you should delete the service, but also the build project, the built image, and the image repository.
 
 </details>
 
@@ -127,8 +87,6 @@ def hello_api():
 ```
 
 Then test your endpoint
-
-<img width="491" height="200" alt="hello_api" src="https://github.com/user-attachments/assets/2731d1be-2222-4199-af89-af6a8f8866aa" />
 
 </details>
 
@@ -452,24 +410,14 @@ aws s3api delete-bucket --bucket hello-bucket
 </details>
 
 <details>
-<summary>Creating a service role</summary>
+<summary>Try to make the duck downloadable</summary>
 
-Your web app in AWS App Runner can perform the same action, but it needs to be authorized to use S3. 
+Hint: if you choose to read it from the bucket, your instance needs a service role 
 
-<img width="420" height="249" alt="security_error" src="https://github.com/user-attachments/assets/2c384b3f-eda3-4f3f-9d22-2b4522b98819" />
-
-In App Runner, go to Configuration, then Security, and associate the instance to a role. 
-
-<img width="920" height="570" alt="configuration_security" src="https://github.com/user-attachments/assets/c66ed83a-0e07-4d95-bb13-bc59f82909d6" />
-
-To this role, attach the S3 full access policy. 
-
-<img width="681" height="447" alt="attach_policy" src="https://github.com/user-attachments/assets/0cd842d1-da45-4f37-9138-a4110f79a0bd" />
-
-Once this is done, it can use AWS CLI or, since this a Python app, the Boto 3 library in app.py. 
+```bash
+@app.route("/download/duck")
+def download_duck():
+    # something
+```
 
 </details>
-
-</details>
-
-
