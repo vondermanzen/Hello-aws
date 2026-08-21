@@ -10,9 +10,9 @@ This course is available for multiple cloud providers. Choose your preferred pla
 
 # University workshop
 
-A modified version of this course was offered as an in-person workshop to a cohort of researchers by the Competency Centre in 2025. 
+A modified version of this course was offered as an in-person workshop for researchers and students by the Competency Centre in 2025. 
 
-Everyone has moved on to other projects within the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
+Everyone has moved on to other projects in the university and new courses and support are now offered by [OxRSE](https://train.rse.ox.ac.uk/material/HPCu/cloud_computing).
 
 # Instructions
 
@@ -104,7 +104,7 @@ def hello_api():
 
 Then test your endpoint
 
-(Image missing here)
+<img width="647" height="299" alt="image" src="https://github.com/user-attachments/assets/64242c0f-9566-48ce-a15e-9c3277954dbd" />
 
 </details>
 
@@ -161,7 +161,7 @@ Open localhost in your browser.
 
 ***
 
-# Exercise: Ducks and AWS CLI
+# Exercise: Ducks and buckets
 
 <details>
 <summary>Clone the repository (if you haven't already)</summary>
@@ -437,5 +437,18 @@ Hint: if you choose to read it from the bucket, your instance needs a service ro
 def download_duck():
     # something
 ```
+
+</details>
+
+<details>
+<summary><h1>Using AI</h1></summary>
+
+I originally suggested to prompt for a duck army... 
+
+<img width="928" height="701" alt="image" src="https://github.com/user-attachments/assets/9eb25a5f-660c-4917-9399-ccc897b632ec" />
+
+...however one of the researchers decided to create a Ducknado and I reckon that is a worthwhile idea.  
+
+<img width="800" height="416" alt="ducknado" src="https://github.com/user-attachments/assets/9d5b499e-d75d-41fb-b105-e65f6afbd59e" />
 
 </details>
